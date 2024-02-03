@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvivpf431afny"]
+
+[ext_resource type="Texture2D" uid="uid://byswm5yytm17w" path="res://Assets/Crates/crate_07.png" id="1_8gcmf"]
+[ext_resource type="Script" path="res://Scripts/crate.gd" id="1_bb768"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lg6yv"]
+size = Vector2(64, 64)
+
+[node name="Crate" type="CharacterBody2D"]
+z_index = -1
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_bb768")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8gcmf")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_lg6yv")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(32, 32)
+target_position = Vector2(0, 90)
+collision_mask = 6
