@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Sokoban-remake"
+config/version="1.0"
 run/main_scene="res://Scenes/current_level.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/image="res://Assets/Player/player_23.png"
+boot_splash/fullsize=false
+config/icon="res://Assets/Player/player_23.png"
+boot_splash/minimum_display_time=800
 
 [autoload]
 
@@ -69,3 +74,5 @@ move_right={
 textures/canvas_textures/default_texture_filter=2
 textures/canvas_textures/default_texture_repeat=1
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.301961, 0.301961, 0.301961, 1)

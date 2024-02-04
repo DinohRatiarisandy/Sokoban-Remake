@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bvivpf431afny"]
+[gd_scene load_steps=8 format=3 uid="uid://bvivpf431afny"]
 
 [ext_resource type="Texture2D" uid="uid://byswm5yytm17w" path="res://Assets/Crates/crate_07.png" id="1_8gcmf"]
 [ext_resource type="Script" path="res://Scripts/crate.gd" id="1_bb768"]
 [ext_resource type="Texture2D" uid="uid://b5yp04221eu58" path="res://Assets/Crates/crate_01.png" id="2_bcald"]
-[ext_resource type="Texture2D" uid="uid://brc83hein1kjy" path="res://Assets/Crates/crate_08.png" id="3_qn8li"]
 [ext_resource type="Texture2D" uid="uid://iclhwrg44i4n" path="res://Assets/Crates/crate_44.png" id="4_wgqyv"]
 [ext_resource type="Texture2D" uid="uid://b4jbj0dqncjkj" path="res://Assets/Crates/crate_45.png" id="6_lma6k"]
 
@@ -18,9 +17,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_wgqyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_qn8li")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_lma6k")
