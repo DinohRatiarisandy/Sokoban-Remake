@@ -1,7 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvivpf431afny"]
+[gd_scene load_steps=9 format=3 uid="uid://bvivpf431afny"]
 
 [ext_resource type="Texture2D" uid="uid://byswm5yytm17w" path="res://Assets/Crates/crate_07.png" id="1_8gcmf"]
 [ext_resource type="Script" path="res://Scripts/crate.gd" id="1_bb768"]
+[ext_resource type="Texture2D" uid="uid://b5yp04221eu58" path="res://Assets/Crates/crate_01.png" id="2_bcald"]
+[ext_resource type="Texture2D" uid="uid://brc83hein1kjy" path="res://Assets/Crates/crate_08.png" id="3_qn8li"]
+[ext_resource type="Texture2D" uid="uid://iclhwrg44i4n" path="res://Assets/Crates/crate_44.png" id="4_wgqyv"]
+[ext_resource type="Texture2D" uid="uid://b4jbj0dqncjkj" path="res://Assets/Crates/crate_45.png" id="6_lma6k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_itsse"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bcald")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_8gcmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wgqyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qn8li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lma6k")
+}],
+"loop": true,
+"name": &"types",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lg6yv"]
 size = Vector2(64, 64)
@@ -12,9 +39,10 @@ collision_layer = 2
 collision_mask = 7
 script = ExtResource("1_bb768")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_8gcmf")
-centered = false
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_itsse")
+animation = &"types"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(32, 32)

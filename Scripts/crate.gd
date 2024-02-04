@@ -2,18 +2,21 @@ class_name Crate
 
 extends CharacterBody2D
 
-@onready var sprite_2d = $Sprite2D
+@export var crate_type : int = 0;
+
 @onready var ray_cast_2d = $RayCast2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var inputs = {"move_right": Vector2.RIGHT, "move_left": Vector2.LEFT, "move_up": Vector2.UP, "move_down": Vector2.DOWN}
-var step : int;
+
+const STEP = 64;
 
 func _ready():
-	step = sprite_2d.get_rect().size.x
+	animated_sprite_2d.frame = crate_type
 
 
 func can_move(dir):
-	var new_pos = inputs[dir] * step
+	var new_pos = inputs[dir] * STEP
 	ray_cast_2d.target_position = new_pos
 	ray_cast_2d.force_raycast_update()
 	

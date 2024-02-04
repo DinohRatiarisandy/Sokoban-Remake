@@ -1,18 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://crrvjycpjmspo"]
+[gd_scene load_steps=11 format=3 uid="uid://crrvjycpjmspo"]
 
-[ext_resource type="Texture2D" uid="uid://c7yf7qwtf7boh" path="res://Assets/Blocks/block_02.png" id="1_wputw"]
+[ext_resource type="Script" path="res://Scripts/wall.gd" id="1_n2hxa"]
+[ext_resource type="Texture2D" uid="uid://bt768xco51xns" path="res://Assets/Blocks/crate_26.png" id="2_p7p4n"]
+[ext_resource type="Texture2D" uid="uid://b3u8k0g6t4or6" path="res://Assets/Blocks/crate_02.png" id="2_x61qk"]
+[ext_resource type="Texture2D" uid="uid://7kt1qt8jrwp6" path="res://Assets/Blocks/crate_22.png" id="3_4i5ek"]
+[ext_resource type="Texture2D" uid="uid://do4yg4v3a65vr" path="res://Assets/Blocks/crate_23.png" id="3_busuf"]
+[ext_resource type="Texture2D" uid="uid://dbr3oue8rm5ib" path="res://Assets/Blocks/crate_24.png" id="4_80dvb"]
+[ext_resource type="Texture2D" uid="uid://bp3sw1mkfldft" path="res://Assets/Blocks/crate_25.png" id="5_vao86"]
+[ext_resource type="Texture2D" uid="uid://dj4j2ff2vn0is" path="res://Assets/Crates/crate_17.png" id="8_1piu7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l07lf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x61qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4i5ek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p7p4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_busuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_80dvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vao86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1piu7")
+}],
+"loop": true,
+"name": &"types",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4y2bm"]
 size = Vector2(64, 64)
 
-[node name="Wall" type="StaticBody2D"]
+[node name="Wal" type="StaticBody2D"]
 z_index = -1
 collision_layer = 4
 collision_mask = 3
+script = ExtResource("1_n2hxa")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wputw")
-centered = false
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_l07lf")
+animation = &"types"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(32, 32)
