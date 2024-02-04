@@ -2,7 +2,6 @@ extends CanvasLayer
 
 @onready var current_level = $".."
 
-
 func _on_retry_pressed():
 	current_level.change_level()
 	self.visible = false

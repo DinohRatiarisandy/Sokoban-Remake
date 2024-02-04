@@ -1,9 +1,8 @@
 extends Node2D
 
-
 func change_level():
 	for child in self.get_children():
-		if child == $Background or child == $GUILevelCompleted:
+		if child == $Background or child == $GUILevelCompleted or child == $MainMenu:
 			continue
 		child.queue_free()
 

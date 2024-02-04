@@ -11,5 +11,6 @@ func _process(_delta):
 			spot_count -= 1
 
 		if spot_count == 0:
-			gui_level_completed.visible = true;
+			gui_level_completed.visible = true
 			player.stop_game = true
+			$SettingGUI.visible = false

@@ -18,4 +18,4 @@ var levels := [
 	preload("res://Scenes/Levels/level_15.tscn"),
 ]
 
-var current_level := 0;
+var current_level := 0

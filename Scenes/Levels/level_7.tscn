@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ceh2in6ybwkq3"]
+[gd_scene load_steps=7 format=3 uid="uid://ceh2in6ybwkq3"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_ueser"]
 [ext_resource type="PackedScene" uid="uid://b5ss8t5gc8f71" path="res://Scenes/player.tscn" id="2_oddkr"]
 [ext_resource type="PackedScene" uid="uid://bvivpf431afny" path="res://Scenes/crate.tscn" id="3_le2ra"]
 [ext_resource type="PackedScene" uid="uid://srpgnmqfkiok" path="res://Scenes/target.tscn" id="4_1s68k"]
 [ext_resource type="PackedScene" uid="uid://crrvjycpjmspo" path="res://Scenes/wall.tscn" id="5_jnr48"]
+[ext_resource type="PackedScene" uid="uid://beyk7h8y36i5p" path="res://Scenes/settingGUI.tscn" id="6_57w43"]
 
 [node name="Level_7" type="Node2D"]
 position = Vector2(61, 0)
@@ -150,3 +151,7 @@ position = Vector2(320, 128)
 [node name="Wall9" parent="Walls" instance=ExtResource("5_jnr48")]
 position = Vector2(128, 128)
 wall_type = 5
+
+[node name="SettingGUI" parent="." instance=ExtResource("6_57w43")]
+offset_left = -61.0
+offset_right = -53.0
