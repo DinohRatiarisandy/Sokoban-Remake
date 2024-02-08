@@ -22,4 +22,4 @@ func _on_retry_pressed():
 func _on_setting_button_pressed():
 	texture_rect.visible = !texture_rect.visible
 	panel.visible = !panel.visible
-	player.stop_game = !player.stop_game
+	player.stop_movement = !player.stop_movement

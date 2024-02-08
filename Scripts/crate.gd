@@ -23,7 +23,12 @@ func can_move(dir):
 	var collider = ray_cast_2d.get_collider()
 	
 	if !collider:
+		animate_movement(self.position + new_pos)
 		return true
 	else:
 		return false
 
+
+func animate_movement(new_pos: Vector2):
+	var tween = self.create_tween()
+	tween.tween_property(self, "position", new_pos, 0.12);
