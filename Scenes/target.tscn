@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://srpgnmqfkiok"]
+[gd_scene load_steps=5 format=3 uid="uid://srpgnmqfkiok"]
 
 [ext_resource type="Script" path="res://Scripts/target.gd" id="1_cqk78"]
 [ext_resource type="Texture2D" uid="uid://bso4pghhkdyq8" path="res://Assets/Environment/environment_16.png" id="2_near4"]
+[ext_resource type="AudioStream" uid="uid://dvgjcco1j5vhd" path="res://Sounds/crateInPlace.wav" id="3_75t4a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bm33m"]
 size = Vector2(14, 14)
@@ -19,6 +20,9 @@ centered = false
 position = Vector2(32, 32)
 shape = SubResource("RectangleShape2D_bm33m")
 debug_color = Color(1, 0.6, 0.701961, 0.419608)
+
+[node name="CrateInPlaceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_75t4a")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

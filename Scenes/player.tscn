@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5ss8t5gc8f71"]
+[gd_scene load_steps=7 format=3 uid="uid://b5ss8t5gc8f71"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_77ifb"]
 [ext_resource type="Texture2D" uid="uid://bey2ogk0hq7lm" path="res://Assets/Player/player_23.png" id="2_gjl8r"]
+[ext_resource type="AudioStream" uid="uid://w2jytojhxf3p" path="res://Sounds/hurt.wav" id="3_dffgl"]
+[ext_resource type="AudioStream" uid="uid://ds8n46jlupnok" path="res://Sounds/move.wav" id="4_g143a"]
+[ext_resource type="AudioStream" uid="uid://budjp8xnps8pe" path="res://Sounds/slide.wav" id="5_wvdks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_745ei"]
 size = Vector2(64, 64)
@@ -22,3 +25,14 @@ shape = SubResource("RectangleShape2D_745ei")
 position = Vector2(32, 32)
 target_position = Vector2(0, 90)
 collision_mask = 6
+
+[node name="SoundManager" type="Node" parent="."]
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("3_dffgl")
+
+[node name="MoveSound" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("4_g143a")
+
+[node name="Slide" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("5_wvdks")
