@@ -1,6 +1,6 @@
 extends Area2D
 
-var occupied : bool = false;
+var occupied : bool = false
 
 @onready var crate_in_place_sound = $CrateInPlaceSound
 
